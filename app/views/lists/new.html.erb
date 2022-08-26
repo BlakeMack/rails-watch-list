@@ -1,6 +1,8 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+<h1>Make a New List!</h1>
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photos, as: :file %>
   <%= f.submit %>
 <% end %>
+
+<h5><%= link_to "go back to your movie lists!", lists_path  %></h5>
